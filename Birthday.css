@@ -60,7 +60,37 @@ p {
     animation: tilt 1.5s linear 0s infinite normal none;
 
 }
+.Div1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 
+    filter: drop-shadow(1px 20px 1px rgba(255, 10, 10, 0.2));
+    background-color: rgb(255, 233, 233);
+}
+.Div1 img {
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+    mask:
+    radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+    radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+    linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+    clip-path: polygon(-41% 0,50% 91%, 141% 0);
+    animation: tilt 3s linear 0s infinite normal none;
+}
+#right-image {
+    animation: revertilt 3s linear 0s infinite normal none;
+}
+#big-image {
+
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    animation: Bounce 1.5s linear 0s infinite normal none;
+}
 @keyframes tilt {
     0%,100%{
         transform: translate(0%);
@@ -69,6 +99,17 @@ p {
         transform: translateX(2px) rotate(-2deg);
     }
     75% {
+        transform: translateX(-2px) rotate(2deg);
+    }
+}
+@keyframes revertilt {
+    0%,100%{
+        transform: translate(0%);
+    }
+    75% {
+        transform: translateX(2px) rotate(-2deg);
+    }
+    25% {
         transform: translateX(-2px) rotate(2deg);
     }
 }
